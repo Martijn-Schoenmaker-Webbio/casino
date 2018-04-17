@@ -1,0 +1,18 @@
+.playing-card-left {
+  float: right;
+}
+
+.playing-card-right {
+  position: relative;
+  float: left;
+  margin-top: -20px;
+  visibility: hidden;
+  z-index: 10;
+}
+
+.playing-card-bottom {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  visibility: hidden;
+}
