@@ -41,14 +41,14 @@ function closest2(array, num){
   return(ans);
 }
 
-console.time('Closest 1');
-
-closest([1,5,25, 50 ,100], 2261) // run whatever needs to be timed in between the statements
-
-console.timeEnd('Closest 1');
-
-console.time('Closest 2');
-
-closest2([1,5,25, 50 ,100], 2261) // run whatever needs to be timed in between the statements
-
-console.timeEnd('Closest 2');
+// console.time('Closest 1');
+//
+// closest([1,5,25, 50 ,100], 2261) // run whatever needs to be timed in between the statements
+//
+// console.timeEnd('Closest 1');
+//
+// console.time('Closest 2');
+//
+// closest2([1,5,25, 50 ,100], 2261) // run whatever needs to be timed in between the statements
+//
+// console.timeEnd('Closest 2');

@@ -86,27 +86,64 @@ var drawCard = {
 
   cardsChosen: [],
 
-  draw: function() {
+  drawCard: function() {
+    //Check if there are any cards left in the deck.
     if (this.cardsChosen.length !== 0) {
-      $('.btn-draw-card').prop('disabled', true);
+
+      //Set the card to draw to the first object in the array of the shuffled deck.
       var card = this.cardsChosen[0];
-      console.log(card.name + ' of ' + card.type);
+
+      //Remove the card from the array.
+      this.cardsChosen.shift();
+
+      return card;
+
+    } else {
+      alert('out of cards!');
+    }
+  },
+
+  draw: function() {
+    //Check if there are any cards left in the deck.
+    if (this.cardsChosen.length !== 0) {
+
+      //Disable the button so the user cannot click faster.
+      $('.btn-draw-card').prop('disabled', true);
+
+      //Set the card to draw to the first object in the array of the shuffled deck.
+      var card = this.cardsChosen[0];
+
+      //Set image of card
       var cardImage = 'img/cards/' + card.image;
+
+      //Log the cardname and type
+      console.log(card.name + ' of ' + card.type);
+
+      //Display the card
       $('.playing-card').attr('src', cardImage);
-      $( ".playing-card" ).css('visibility', 'visible');
-      $( ".playing-card" ).animate({
-        marginTop: "0",
+
+      //Set visibility of card to visible
+      $('.playing-card').css('visibility', 'visible');
+
+      //Animate card
+      $('.playing-card').animate({
+        marginTop: '0',
       }, 250, function() {
         $('.playing-card-bottom').attr('src', cardImage);
-        $( ".playing-card" ).css('visibility', 'hidden');
-        $( ".playing-card" ).css('marginTop', '-20px');
+        $( '.playing-card' ).css('visibility', 'hidden');
+        $( '.playing-card' ).css('marginTop', '-20px');
         $('.btn-draw-card').prop('disabled', false);
         $('.playing-card-bottom').css('visibility', 'visible');
       });
 
+      //Remove the card from the array.
       this.cardsChosen.shift();
+
+      //Set the amount of cards left
       var cardsLeft = this.cardsChosen.length;
       $('#cards-left').html(cardsLeft);
+
+      //Check if there are any cards left. If not then hide the closed deck.
       if (cardsLeft === 0) {
         $('.playing-card-left').css('visibility', 'hidden');
       }
@@ -115,8 +152,6 @@ var drawCard = {
     }
   }
 }
-
-var players = [];
 
 $(document).ready(function() {
 
@@ -155,4 +190,35 @@ $(document).ready(function() {
           $( '.btn-shuffle' ).click();
       }
   });
+
+  var players = [
+  {type: 'player', name: 'Henk', bet: 20, cards: [], totalValue: 0},
+  {type: 'player', name: 'Joe', bet: 15, cards: [], totalValue: 0},
+  {type: 'player', name: 'Vera', bet: 30, cards: [], totalValue: 0}
+  ];
+
+  function playBlackJack(players) {
+    console.log('There are ' + playerAmount + ' players playing the game.');
+    var allPlayers = [{type: 'dealer', name: 'Dealer', cards: [], totalValue: 0}];
+    Array.prototype.push.apply(allPlayers, players);
+    console.log(allPlayers);
+    var playerAmount = allPlayers.length;
+
+    for (var j = 0; j < 2; j++) {
+      console.log('========== DEAL ' + (j + 1) + ' ==========');
+      for (var i = 0; i < playerAmount; i++) {
+        var card = drawCard.drawCard();
+        if (card.value.length) {
+          allPlayers[i].totalValue += 11;
+        } else {
+          allPlayers[i].totalValue += card.value;
+        }
+        allPlayers[i].cards.push(card);
+        console.log(allPlayers[i]);
+      }
+    }
+
+  }
+
+  playBlackJack(players);
 });
