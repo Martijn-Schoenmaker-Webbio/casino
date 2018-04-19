@@ -1,3 +1,53 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: radial-gradient(circle at top, #01798A, #01373d);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lora', serif;
+}
+
+.button-primary-casino {
+  border-color:#7D6813;
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-decoration:none;
+  display:inline-block;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #eab92d; background-image: -webkit-gradient(linear, left top, left bottom, from(#eab92d), to(#c79810));
+  background-image: -webkit-linear-gradient(top, #eab92d, #c79810);
+  background-image: -moz-linear-gradient(top, #eab92d, #c79810);
+  background-image: -ms-linear-gradient(top, #eab92d, #c79810);
+  background-image: -o-linear-gradient(top, #eab92d, #c79810);
+  background-image: linear-gradient(to bottom, #eab92d, #c79810);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#eab92d, endColorstr=#c79810);
+}
+
+.button-primary-casino:hover {
+  border-color:#61510F;border-width: 0px 0px 2px 0px;border-style: solid;
+  background-color: #cf9f15; background-image: -webkit-gradient(linear, left top, left bottom, from(#cf9f15), to(#98740c));
+  background-image: -webkit-linear-gradient(top, #cf9f15, #98740c);
+  background-image: -moz-linear-gradient(top, #cf9f15, #98740c);
+  background-image: -ms-linear-gradient(top, #cf9f15, #98740c);
+  background-image: -o-linear-gradient(top, #cf9f15, #98740c);
+  background-image: linear-gradient(to bottom, #cf9f15, #98740c);
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#cf9f15, endColorstr=#98740c);
+}
+
+.big-bg {
+  background-image: url(../img/backgrounds/noise.png);
+  width: 100%;
+  height: 100%;
+}
+
 .playing-card-left {
   float: right;
 }

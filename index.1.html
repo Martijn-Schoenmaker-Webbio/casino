@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -35,7 +35,6 @@
 
 </head>
 <body>
-  <div class="big-bg">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -55,17 +54,36 @@
       <div class="twelve columns">
         <div class="teams" style="text-align: center; margin-top: 40px;">
           <div class="row">
+            <div class="six columns" style="position: relative">
+              <img class="playing-card-left" src="img/cards/red_back.png" alt="" width="250">
+            </div>
+
+            <div class="six columns" style="position: relative">
+              <img class="playing-card playing-card-right" src="" alt="" width="250">
+              <img class="playing-card-bottom" src="img/cards/green_back.png" alt="" width="250"><br>
+            </div>
+          </div>
+          <div class="row">
             <div class="twelve columns">
               <input id="input-deck-amount" type="number" name="" value="3">
               <button class="btn-shuffle" type="button" name="button">Shuffle Cards</button>
-              <button class="btn-draw-card button-primary-casino" type="button" name="button">Draw Card</button>
+              <button class="btn-draw-card button-primary" type="button" name="button">Draw Card</button>
             </div>
           </div>
+          <div class="row">
+            <div class="twelve columns">
+              <input id="input-new-player-name" type="text" name="" value="Marty">
+              <input id="input-new-player-chips" type="number" name="" value="10">
+              <button class="btn-add-player" type="button" name="button">Add Players</button>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
     </div>
   </div>
-</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

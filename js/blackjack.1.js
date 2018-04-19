@@ -219,55 +219,55 @@ $(document).ready(function() {
       }
     }
 
-    // if (confirm('Next round?')) {
-    //   var dealer = allPlayers[0];
-    //   for (var g = 1; g < playerAmount; g++) {
-    //     var anotherHit = 1;
-    //     var currentPlayer = allPlayers[g];
-    //     for (var h = 0; h < anotherHit; h++) {
-    //       if (confirm('Hi ' + currentPlayer.name + ', do you want to hit or stay?')) {
-    //         console.log(currentPlayer.name + ' wants to hit');
-    //         var card = drawCard.drawCard();
-    //         if (card.name === 'Ace') {
-    //           card.value = 1;
-    //         }
-    //         console.log(currentPlayer.name + ' got a ' + card.name + ' of ' + card.type + ' with a value of ' + card.value);
-    //         currentPlayer.totalValue += card.value;
-    //         console.log(currentPlayer.name + ' has ' + currentPlayer.totalValue + ' points.');
-    //         if (currentPlayer.totalValue > 21) {
-    //           console.log(currentPlayer.name + ' busted!');
-    //           currentPlayer.bet = 0;
-    //         } else {
-    //           h--;
-    //         }
-    //       } else{
-    //         console.log(currentPlayer.name + ' stays with ' + currentPlayer.totalValue);
-    //       }
-    //     }
-    //   }
-    //   console.log('Dealer has a total value of ' + dealer.totalValue);
-    //   anotherHit = 1;
-    //   if (dealer.totalValue < 17) {
-    //     for (var i = 0; i < anotherHit; i++) {
-    //       console.log('Dealer will draw a card');
-    //       var card = drawCard.drawCard();
-    //       dealer.totalValue += card.value;
-    //       console.log('Dealer drew a ' + card.name + ' of ' + card.type + ' with a value of ' + card.value);
-    //       console.log('Dealer has now a total of ' + dealer.totalValue + ' points.');
-    //       if (dealer.totalValue < 17) {
-    //         i--;
-    //       } else if (dealer.totalValue > 21) {
-    //         console.log('Dealer busts');
-    //       } else {
-    //         console.log('Dealer stays');
-    //       }
-    //     }
-    //   } else if (dealer.totalValue > 21) {
-    //     console.log('Dealer busts');
-    //   } else {
-    //     console.log('Dealer stays');
-    //   }
-    // }
+    if (confirm('Next round?')) {
+      var dealer = allPlayers[0];
+      for (var g = 1; g < playerAmount; g++) {
+        var anotherHit = 1;
+        var currentPlayer = allPlayers[g];
+        for (var h = 0; h < anotherHit; h++) {
+          if (confirm('Hi ' + currentPlayer.name + ', do you want to hit or stay?')) {
+            console.log(currentPlayer.name + ' wants to hit');
+            var card = drawCard.drawCard();
+            if (card.name === 'Ace') {
+              card.value = 1;
+            }
+            console.log(currentPlayer.name + ' got a ' + card.name + ' of ' + card.type + ' with a value of ' + card.value);
+            currentPlayer.totalValue += card.value;
+            console.log(currentPlayer.name + ' has ' + currentPlayer.totalValue + ' points.');
+            if (currentPlayer.totalValue > 21) {
+              console.log(currentPlayer.name + ' busted!');
+              currentPlayer.bet = 0;
+            } else {
+              h--;
+            }
+          } else{
+            console.log(currentPlayer.name + ' stays with ' + currentPlayer.totalValue);
+          }
+        }
+      }
+      console.log('Dealer has a total value of ' + dealer.totalValue);
+      anotherHit = 1;
+      if (dealer.totalValue < 17) {
+        for (var i = 0; i < anotherHit; i++) {
+          console.log('Dealer will draw a card');
+          var card = drawCard.drawCard();
+          dealer.totalValue += card.value;
+          console.log('Dealer drew a ' + card.name + ' of ' + card.type + ' with a value of ' + card.value);
+          console.log('Dealer has now a total of ' + dealer.totalValue + ' points.');
+          if (dealer.totalValue < 17) {
+            i--;
+          } else if (dealer.totalValue > 21) {
+            console.log('Dealer busts');
+          } else {
+            console.log('Dealer stays');
+          }
+        }
+      } else if (dealer.totalValue > 21) {
+        console.log('Dealer busts');
+      } else {
+        console.log('Dealer stays');
+      }
+    }
 
   }
 
