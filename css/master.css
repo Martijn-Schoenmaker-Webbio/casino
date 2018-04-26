@@ -21,7 +21,8 @@ body {
 
 .button-holder {
   position: relative;
-  display: inline-block
+  display: inline-block;
+  float: left;
 }
 
 .button-primary-casino {
