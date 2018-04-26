@@ -27,7 +27,8 @@ body {
 .button-primary-casino {
   top: 0;
   left: 0;
-  position: absolute;
+  position: relative;
+  z-index: 10;
   display: inline-block;
   border:1px solid #A17013;
   color: #78450A;
@@ -58,10 +59,10 @@ body {
               0 4px 0px 0 rgba(0, 0, 0, 0.2);
   text-shadow: 0 1px 0 #FFFFFF;
   background-color: #FFD843;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition:    all 0.2s ease;
-  -ms-transition:     all 0.2s ease;
-  -o-transition:      all 0.2s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition:    all 0.1s ease;
+  -ms-transition:     all 0.1s ease;
+  -o-transition:      all 0.1s ease;
 }
 
 .button-primary-casino:hover {
