@@ -26,8 +26,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/blackjack.js"></script>
-  <script type="text/javascript" src="js/closestTo.js"></script>
+  <script type="text/javascript" src="js/blackjack-2.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -38,19 +37,36 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <div class="row stats">
+      <div class="container stats-holder">
+        <div class="six columns">
+          <span style="font-weight: 600">Amount of decks in play: </span><span id="deck-amount">-</span>
+        </div>
+        <div class="six columns">
+          <span style="font-weight: 600">Cards left in deck: </span><span id="cards-left">-</span>
+        </div>
+      </div>
+    </div> -->
+  
   <div class="container">
-    <div class="row">
-      <div class="four columns">
-        <span style="font-weight: 600">Amount of decks in play: </span><span id="deck-amount"></span>
-      </div>
-      <div class="four columns">
-        <span style="font-weight: 600">Cards left in deck: </span><span id="cards-left"></span>
-      </div>
-      <div class="four columns">
-        <span style="font-weight: 600">Iets anders: </span><span id=""></span>
+
+    <div class="row-center">
+      <div class="center">
+        <label for="input-new-player-name">Name</label>
+        <input id="input-new-player-name" type="text" name="" value="Marty">
+        <label for="input-new-player-name">Coins</label>
+        <input id="input-new-player-value" type="number" name="" value="100">
+        <span class="button-holder">                
+            <button class="button-primary-casino btn-add-player" type="button" name="button">
+              <span href="#" class="inner-button">
+                  Play BlackJack
+              </span>
+            </button>
+          </span>
       </div>
     </div>
-    <div class="row">
+
+    <!-- <div class="row">
       <div class="twelve columns">
         <div class="teams" style="text-align: center; margin-top: 40px;">
           <div class="row">
@@ -71,7 +87,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="twelve columns">
+            <div class="six columns">
               <input id="input-new-player-name" type="text" name="" value="Marty">
               <input id="input-new-player-chips" type="number" name="" value="10">
               <button class="button btn-add-player" type="button" name="button">Add Players</button>
@@ -82,7 +98,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
 <!-- End Document

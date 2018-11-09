@@ -165,11 +165,13 @@ $(document).ready(function() {
   }
 
   $( '.btn-add-player' ).click(function() {
+    console.log('test')
     var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
     var playerID = randLetter + Date.now();
     var playerName = $( '#input-new-player-name' ).val();
     var playerChips = $( '#input-new-player-chips' ).val();
     players.push(new Player(playerID, playerName, playerChips));
+    console.log(players)
   });
 
   var input = $( '#input-deck-amount' )[0];
